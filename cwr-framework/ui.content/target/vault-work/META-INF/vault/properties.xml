@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>CWRFramework - UI content</comment>
+<entry key="createdBy">579458</entry>
+<entry key="name">cwr-framework.ui.content</entry>
+<entry key="created">2017-03-29T12:00:57.642+0530</entry>
+<entry key="groupId">CWRFramework</entry>
+<entry key="version">1.0-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">CWRFrameworkPackages</entry>
+<entry key="description">UI content package for CWR Framework</entry>
+<entry key="artifactId">cwr-framework.ui.content</entry>
+<entry key="path">/etc/packages/CWRFrameworkPackages/cwr-framework.ui.content.zip</entry>
+</properties>
