@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Top Navigation (Design)"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <absParent
+            jcr:primaryType="nt:unstructured"
+            allowBlank="{Boolean}false"
+            fieldLabel="Child pages depth"
+            name="./pageDepth"
+            xtype="numberfield"/>
+        <absParentNumVal
+            jcr:primaryType="nt:unstructured"
+            ignoreData="{Boolean}true"
+            name="./pageDepth@TypeHint"
+            value="Decimal"
+            xtype="hidden"/>
+        <basePath
+            jcr:primaryType="nt:unstructured"
+            fieldLabel="Base Path"
+            name="./basePath"
+            xtype="pathfield"/>
+        <customPaths
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Select nav paths"
+            name="./customPaths"
+            xtype="multifield">
+            <fieldConfig
+                jcr:primaryType="nt:unstructured"
+                xtype="pathfield"/>
+        </customPaths>
+    </items>
+</jcr:root>
