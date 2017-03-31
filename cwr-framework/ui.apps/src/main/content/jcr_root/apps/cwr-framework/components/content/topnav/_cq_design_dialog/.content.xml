@@ -20,6 +20,7 @@
                         sling:resourceType="granite/ui/components/foundation/form/textfield"
                         fieldLabel="Child pages depth"
                         name="./pageDepth"
+                        required="{Boolean}true"
                         xtype="textfield"/>
                     <absParentNumValue
                         jcr:primaryType="nt:unstructured"

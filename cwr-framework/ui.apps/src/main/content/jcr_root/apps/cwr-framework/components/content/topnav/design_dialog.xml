@@ -6,6 +6,7 @@
     <items jcr:primaryType="cq:WidgetCollection">
         <absParent
             jcr:primaryType="nt:unstructured"
+            allowBlank="{Boolean}false"
             fieldLabel="Child pages depth"
             name="./pageDepth"
             xtype="numberfield"/>
