@@ -8,29 +8,12 @@
             jcr:primaryType="nt:unstructured"
             fieldLabel="Child pages depth"
             name="./pageDepth"
-            xtype="textfield"/>
+            xtype="numberfield"/>
         <basePath
             jcr:primaryType="nt:unstructured"
             fieldLabel="Base Path"
             name="./basePath"
             xtype="pathfield"/>
-        <includeChildPages
-            jcr:primaryType="cq:Widget"
-            fieldLabel="Include child pages?"
-            name="./includeChildPages"
-            type="select"
-            xtype="selection">
-            <options jcr:primaryType="cq:WidgetCollection">
-                <yes
-                    jcr:primaryType="nt:unstructured"
-                    text="Yes"
-                    value="yes"/>
-                <no
-                    jcr:primaryType="nt:unstructured"
-                    text="No"
-                    value="no"/>
-            </options>
-        </includeChildPages>
         <customPaths
             jcr:primaryType="cq:Widget"
             fieldLabel="Select nav paths"
@@ -40,5 +23,11 @@
                 jcr:primaryType="nt:unstructured"
                 xtype="pathfield"/>
         </customPaths>
+        <absParentNumValue
+            jcr:primaryType="nt:unstructured"
+            ignoreData="{Boolean}true"
+            name="./pageDepth@TypeHint"
+            value="Decimal"
+            xtype="hidden"/>
     </items>
 </jcr:root>

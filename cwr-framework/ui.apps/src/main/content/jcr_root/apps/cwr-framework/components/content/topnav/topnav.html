@@ -9,8 +9,15 @@
 <template data-sly-template.descendants="${@ page}">
 
    <a href="${page.path}.html"> ${page.title}</a>
+
+   <div data-sly-test.configuredDepth="${currentStyle.pageDepth}"></div>
     <ul data-sly-list.child="${page.listChildren}">
-      <li data-sly-call="${descendants @ page=child}"></li>
+        <div class="row" data-sly-use.topNav1 = "${'com.aem.cwr.framework.core.TopNav' @ currentPageParam = child.path}">
+
+                <div data-sly-test="${configuredDepth>=topNav1.pageDepth}"> 
+             		<li data-sly-call="${descendants @ page=child}"></li>
+            	</div>
+		</div>
     </ul>
 </template>
 

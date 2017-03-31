@@ -21,28 +21,18 @@
                         fieldLabel="Child pages depth"
                         name="./pageDepth"
                         xtype="textfield"/>
+                    <absParentNumValue
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="{Boolean}true"
+                        name="./pageDepth@TypeHint"
+                        value="Decimal"
+                        xtype="hidden"/>
                     <basePath
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                         fieldDescription="Base Path"
                         fieldLabel="Base Path"
                         name="./basePath"/>
-                    <includeChildPages
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/foundation/form/select"
-                        fieldLabel="Include child pages?"
-                        name="./includeChildPages">
-                        <items jcr:primaryType="nt:unstructured">
-                            <yes
-                                jcr:primaryType="nt:unstructured"
-                                text="Yes"
-                                value="yes"/>
-                            <no
-                                jcr:primaryType="nt:unstructured"
-                                text="No"
-                                value="no"/>
-                        </items>
-                    </includeChildPages>
                     <customPaths
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/form/multifield"
