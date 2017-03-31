@@ -1,0 +1,36 @@
+<!--
+
+  Top Navigation component
+
+  Draws the top navigation
+
+-->
+
+<template data-sly-template.descendants="${@ page}">
+
+   <a href="${page.path}.html"> ${page.title}</a>
+    <ul data-sly-list.child="${page.listChildren}">
+      <li data-sly-call="${descendants @ page=child}"></li>
+    </ul>
+</template>
+
+<div data-sly-test.basePath="${currentStyle.basePath}" data-sly-unwrap></div>
+
+<!--Case 1 when only base path is configured-->
+<div data-sly-test="${basePath}" data-sly-unwrap>
+    <div class="row" data-sly-use.topNav = "${'com.aem.cwr.framework.core.TopNav' @ path = basePath}">
+       <div data-sly-call="${descendants @ page=topNav.pageResource}" data-sly-unwrap>
+        </div>
+    </div>
+</div>
+
+
+<!--Case 2 when navigation paths are configured manually-->
+<div data-sly-test="${basePath=='' || basePath==null}" data-sly-unwrap>
+    <div data-sly-list.customPath="${currentStyle.customPaths}" data-sly-unwrap>
+        <div class="row" data-sly-use.topNav1 = "${'com.aem.cwr.framework.core.TopNav' @ path = customPath}">
+           <div data-sly-call="${descendants @ page=topNav1.pageResource}" data-sly-unwrap>
+           </div>
+        </div>
+    </div>
+</div>
