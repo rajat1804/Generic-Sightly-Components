@@ -26,6 +26,20 @@
     </ul>
 </template>
 
+<template data-sly-template.descendants1="${@ page,imagePath}">
+   <a src="${imagePath}" href="${page.path}.html"> ${page.title}</a>
+
+   <div data-sly-test.configuredDepth="${currentStyle.pageDepth}"></div>
+    <ul data-sly-list.child="${page.listChildren}">
+        <div class="row" data-sly-use.topNav1 = "${'com.aem.cwr.framework.core.TopNav' @ currentPageParam = child.path}">
+
+                <div data-sly-test="${configuredDepth>=topNav1.pageDepth}"> 
+             		<li data-sly-call="${descendants @ page=child}"></li>
+            	</div>
+		</div>
+    </ul>
+</template>
+
 <div data-sly-test.basePath="${currentStyle.basePath}" data-sly-unwrap></div>
 
 <!--Case 1 when only base path is configured-->
@@ -49,9 +63,8 @@
 <div data-sly-test="${basePath=='' || basePath==null}" data-sly-unwrap>
     <div class="grey-bg" data-sly-use.convertToJSON="${'convertToJSON.js' @ nodeName=currentStyle.customPaths}">
         <div data-sly-list.customPath="${convertToJSON.proposerObjs}" data-sly-unwrap>
-
         <div class="row" data-sly-use.topNav1 = "${'com.aem.cwr.framework.core.TopNav' @ path = customPath.navPath}">
-           <div data-sly-call="${descendants @ page=topNav1.pageResource}" data-sly-unwrap>
+           <div data-sly-call="${descendants1 @ page=topNav1.pageResource, imagePath=customPath.imagePath}" data-sly-unwrap>
            </div>
         </div>
         </div>
