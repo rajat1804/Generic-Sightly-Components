@@ -5,6 +5,11 @@
   Draws the top navigation
 
 -->
+<meta data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap>
+	<clientlib data-sly-call="${clientLib.js @ categories='topNavClientLibs.all'}" data-sly-unwrap/>
+</meta>
+
+<div data-sly-test.navTypeProp="${currentStyle.navType}"/> 
 
 <template data-sly-template.descendants="${@ page}">
 
@@ -33,11 +38,22 @@
 
 
 <!--Case 2 when navigation paths are configured manually-->
-<div data-sly-test="${basePath=='' || basePath==null}" data-sly-unwrap>
+<!--<div data-sly-test="${basePath=='' || basePath==null}" data-sly-unwrap>
     <div data-sly-list.customPath="${currentStyle.customPaths}" data-sly-unwrap>
         <div class="row" data-sly-use.topNav1 = "${'com.aem.cwr.framework.core.TopNav' @ path = customPath}">
            <div data-sly-call="${descendants @ page=topNav1.pageResource}" data-sly-unwrap>
            </div>
+        </div>
+    </div>
+</div>-->
+<div data-sly-test="${basePath=='' || basePath==null}" data-sly-unwrap>
+    <div class="grey-bg" data-sly-use.convertToJSON="${'convertToJSON.js' @ nodeName=currentStyle.customPaths}">
+        <div data-sly-list.customPath="${convertToJSON.proposerObjs}" data-sly-unwrap>
+
+        <div class="row" data-sly-use.topNav1 = "${'com.aem.cwr.framework.core.TopNav' @ path = customPath.navPath}">
+           <div data-sly-call="${descendants @ page=topNav1.pageResource}" data-sly-unwrap>
+           </div>
+        </div>
         </div>
     </div>
 </div>
