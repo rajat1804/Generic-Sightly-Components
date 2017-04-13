@@ -28,7 +28,7 @@
                         xtype="textarea"/>
                     <multi
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Add Glossary Terms"
+                        fieldLabel="Add Buttons"
                         name="./questionMap"
                         xtype="multifield">
                         <fieldConfig
