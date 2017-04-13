@@ -1,0 +1,96 @@
+Hiiiiiiiiiiiiiii
+<div data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">  </div>
+
+<div data-sly-use.convertToJSON1="${'convertToJSON.js' @ nodeName=properties.multifield}"></div>
+
+<clientlib data-sly-call="${clientLib.all @ categories='carouselall'}" data-sly-unwrap/>
+
+
+<div class="container">
+  <br>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="${properties.playSpeed}" data-pause="hover">
+
+			<div data-sly-list="${properties.listFrom}" data-sly-unwrap>
+
+				<div data-sly-test="${item == 'children'}" data-sly-unwrap>
+
+
+					<div data-sly-use.carousel="${'com.aem.cwr.framework.core.wcmhelper.Carousel' @ path=properties.parentPage ,slideLimit=properties.limit}" data-sly-unwrap>
+
+							<ol class="carousel-indicators" data-sly-list.child="${carousel.listObject}">
+								<li data-target="#myCarousel" data-slide-to="${childList.index}" class="${childList.index == 0 ? 'active' : ''}"></li>
+							</ol>
+						<div class="carousel-inner" role="listbox">
+						<div data-sly-list.child="${carousel.listObject}" data-sly-unwrap>
+    					<div class="item ${childList.index == 0 ? 'active' : ''}" >
+                            <img src="${child.image != '' ? child.image : '/etc/designs/default/0.gif'}" alt="${child.title}">
+								<div class="carousel-caption">
+									<h3>${child.title}</h3>
+									<p>${child.desc}</p>
+    							</div>
+						</div>
+
+						</div>
+
+						</div>
+
+					</div>
+				</div>
+  
+
+				<div data-sly-test="${item == 'images'}"  data-sly-unwrap>
+
+
+					  <ol class="carousel-indicators" data-sly-list.proposerUploadtypeObj1="${convertToJSON1.proposerObjs}">
+                          <li data-target="#myCarousel" data-slide-to="${proposerUploadtypeObj1List.index}" class="${childList.index == 0 ? 'active' : ''}"></li>
+                      </ol>
+					
+						<div class="carousel-inner" role="listbox">
+						<div data-sly-list.proposerUploadtypeObj1="${convertToJSON1.proposerObjs}" data-sly-unwrap>
+							<div class="item ${proposerUploadtypeObj1List.index == 0 ? 'active' : ''}" >
+							<img src="${proposerUploadtypeObj1.image != '' ? proposerUploadtypeObj1.image : '/etc/designs/default/0.gif'}" alt="${proposerUploadtypeObj1.fieldlabel1}">
+							<div class="carousel-caption">	
+							<h3>${proposerUploadtypeObj1.fieldTitle}</h3>
+							<p>${proposerUploadtypeObj1.fieldDesc}</p>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-sly-test="${item == 'static'}" data-sly-unwrap>
+
+					<div data-sly-use.text="${'com.aem.cwr.framework.core.wcmhelper.FixedList' @ fixedPages=properties.pages,slideLimit=properties.limit}">
+
+						
+						<ol class="carousel-indicators" data-sly-list.child1="${text.fixedListObject}">
+							<li data-target="#myCarousel" data-slide-to="${child1List.index}" class="${childList.index == 0 ? 'active' : ''}"></li>
+						</ol>
+					
+					<div class="carousel-inner" role="listbox">
+					<div data-sly-list.child1="${text.fixedListObject}" data-sly-unwrap>
+					<div class="item ${child1List.index == 0 ? 'active' : ''}" >
+   			 			<img src="${child1.image != '' ? child1.image : '/etc/designs/default/0.gif'}" alt="${child1.title}">
+						<div class="carousel-caption">	
+       					<h3>${child1.title}</h3>
+    					<p>${child1.desc}</p>
+					</div>
+    				</div>
+
+    			</div>
+			</div>
+		</div>
+    		</div>
+
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+</div>
+</div>

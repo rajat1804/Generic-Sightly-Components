@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Carousel"
+    manageTabs="function(tab,noSwitch){var tabs=['carousel','list','children','static','images'];var index=tabs.indexOf(tab);if(index==-1) return;for(var i=2;i&lt;tabs.length;i++){if(index==i){this.unhideTabStripItem(i);}else{this.hideTabStripItem(i);}}this.doLayout();if(!noSwitch)this.activate(index);}"
+    manageTabs1="function(tab,noSwitch)&#xa;{var tabs=['carousel','list','children','static','images','image1','image2','image3','image4'];&#xa;this.unhideTabStripItem(5);&#xa;this.doLayout();&#xa;if(!noSwitch)this.activate(index);}"
+    title="Carousel"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <carousel
+            jcr:primaryType="cq:Widget"
+            title="Carousel"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <playSpeed
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="{Long}6000"
+                    fieldDescription="Time in milliseconds until the next slide is shown."
+                    fieldLabel="Play Speed"
+                    name="./playSpeed"
+                    xtype="numberfield"/>
+            </items>
+        </carousel>
+        <list
+            jcr:primaryType="cq:Widget"
+            title="List"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <listFrom
+                    jcr:primaryType="cq:Widget"
+                    defaultValue=""
+                    fieldLabel="Build list using"
+                    name="./listFrom"
+                    type="select"
+                    xtype="selection">
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        loadcontent="function(){this.findParentByType('tabpanel').manageTabs(this.getValue(),true);}"
+                        selectionchanged="function(box,value){box.findParentByType('tabpanel').manageTabs(value);}"/>
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <children
+                            jcr:primaryType="nt:unstructured"
+                            text="Child pages"
+                            value="children"/>
+                        <static
+                            jcr:primaryType="nt:unstructured"
+                            text="Fixed list"
+                            value="static"/>
+                        <images
+                            jcr:primaryType="nt:unstructured"
+                            text="Carousel by Images"
+                            value="images"/>
+                    </options>
+                </listFrom>
+                <limit
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Maximum number of items displayed in list"
+                    fieldLabel="Limit"
+                    name="./limit"
+                    xtype="numberfield"/>
+            </items>
+        </list>
+        <children
+            jcr:primaryType="cq:Widget"
+            title="Child pages"
+            xtype="panel">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                render="function() { this.findParentByType('tabpanel').hideTabStripItem(2); }"/>
+            <items jcr:primaryType="cq:WidgetCollection">
+                <parentPage
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Leave empty to use current page"
+                    fieldLabel="Parent page"
+                    name="./parentPage"
+                    xtype="pathfield"/>
+            </items>
+        </children>
+        <static
+            jcr:primaryType="cq:Widget"
+            title="Fixed list"
+            xtype="panel">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                render="function() { this.findParentByType('tabpanel').hideTabStripItem(3); }"/>
+            <items jcr:primaryType="cq:WidgetCollection">
+                <pages
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Click the '+' to add a new page"
+                    fieldLabel="Pages"
+                    name="./pages"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        width="155"
+                        xtype="pathfield"/>
+                </pages>
+            </items>
+        </static>
+        <images
+            jcr:primaryType="cq:Widget"
+            title="Choose Images"
+            xtype="panel">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                render="function() { this.findParentByType('tabpanel').hideTabStripItem(4); }"/>
+            <items jcr:primaryType="cq:WidgetCollection">
+                <multi
+                    jcr:primaryType="cq:Widget"
+                    name="./multifield"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        hideLabel="{Boolean}true"
+                        layout="form"
+                        xtype="customMultiPanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <title
+                                jcr:primaryType="cq:Widget"
+                                dName="fieldTitle"
+                                fieldLabel="Title:"
+                                itemId="fieldLabel"
+                                width="{Long}300"
+                                xtype="textfield"/>
+                            <description
+                                jcr:primaryType="cq:Widget"
+                                dName="fieldDesc"
+                                fieldLabel="Description of image"
+                                itemId="fieldlink"
+                                width="{Long}400"
+                                xtype="textarea"/>
+                            <image
+                                jcr:primaryType="cq:Widget"
+                                dName="image"
+                                fieldLabel="Select Image"
+                                xtype="pathfield"/>
+                        </items>
+                    </fieldConfig>
+                </multi>
+            </items>
+        </images>
+    </items>
+</jcr:root>
