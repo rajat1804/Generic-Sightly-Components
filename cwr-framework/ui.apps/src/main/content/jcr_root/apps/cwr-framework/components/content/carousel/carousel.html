@@ -23,11 +23,13 @@ Hiiiiiiiiiiiiiii
 						<div class="carousel-inner" role="listbox">
 						<div data-sly-list.child="${carousel.listObject}" data-sly-unwrap>
     					<div class="item ${childList.index == 0 ? 'active' : ''}" >
+						<a href="${child.path}">
                             <img src="${child.image != '' ? child.image : '/etc/designs/default/0.gif'}" alt="${child.title}">
 								<div class="carousel-caption">
 									<h3>${child.title}</h3>
 									<p>${child.desc}</p>
     							</div>
+                                </a>
 						</div>
 
 						</div>
@@ -69,11 +71,13 @@ Hiiiiiiiiiiiiiii
 					<div class="carousel-inner" role="listbox">
 					<div data-sly-list.child1="${text.fixedListObject}" data-sly-unwrap>
 					<div class="item ${child1List.index == 0 ? 'active' : ''}" >
+                    <a href="${child1.path}">
    			 			<img src="${child1.image != '' ? child1.image : '/etc/designs/default/0.gif'}" alt="${child1.title}">
 						<div class="carousel-caption">	
        					<h3>${child1.title}</h3>
     					<p>${child1.desc}</p>
 					</div>
+                    </a>
     				</div>
 
     			</div>
