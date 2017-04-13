@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    manageTabs="function(tab,noSwitch){var tabs=['list','manualinput','automatedinput'];var index=tabs.indexOf(tab);if(index==-1) return;for(var i=1;i&lt;tabs.length;i++){if(index==i){this.unhideTabStripItem(i);}else{this.hideTabStripItem(i);}}this.doLayout();if(!noSwitch)this.activate(index);}"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <list
+            jcr:primaryType="cq:Widget"
+            title="Input Method"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <method
+                    jcr:primaryType="cq:Widget"
+                    defaultValue=""
+                    fieldLabel="Method to provide news details"
+                    name="./select"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <manualinput
+                            jcr:primaryType="cq:Widget"
+                            text="Manual Input"
+                            value="manualinput"/>
+                        <automatedinput
+                            jcr:primaryType="cq:Widget"
+                            text="Automated Input"
+                            value="automatedinput"/>
+                    </options>
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        loadcontent="function(){this.findParentByType('tabpanel').manageTabs(this.getValue(),true);}"
+                        selectionchanged="function(box,value){box.findParentByType('tabpanel').manageTabs(value);}"/>
+                </method>
+            </items>
+        </list>
+        <manualinput
+            jcr:primaryType="cq:Widget"
+            title="Manual Input"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <multi
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="click + to add menu column"
+                    fieldLabel="Manual Input of Details"
+                    name="./contentMap"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        layout="form"
+                        xtype="customMultiPanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <details
+                                jcr:primaryType="cq:Widget"
+                                dName="news"
+                                fieldLabel="Choose the news you want to display"
+                                rootpath="/content/cwr-framework/en/News"
+                                xtype="pathfield"/>
+                            <headline
+                                jcr:primaryType="cq:Widget"
+                                dName="headline"
+                                fieldLabel="Headline"
+                                xtype="textfield"/>
+                            <description
+                                jcr:primaryType="cq:Widget"
+                                dName="description"
+                                fieldLabel="Description"
+                                xtype="textarea"/>
+                            <image
+                                jcr:primaryType="cq:Widget"
+                                dName="imgfile"
+                                fieldLabel="Image"
+                                rootpath="/content/dam/cwr-framework"
+                                xtype="pathfield"/>
+                        </items>
+                    </fieldConfig>
+                </multi>
+            </items>
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                render="function() { this.findParentByType('tabpanel').hideTabStripItem(1); }"/>
+        </manualinput>
+        <automatedinput
+            jcr:primaryType="cq:Widget"
+            title="Automated Input"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <multiauto
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="click + to add menu column"
+                    fieldLabel="Automated Input of Details"
+                    name="./autocontentMap"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        layout="form"
+                        xtype="customMultiPanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <autodetails
+                                jcr:primaryType="cq:Widget"
+                                dName="autonews"
+                                fieldLabel="Choose the news you want to display"
+                                rootpath="/content/cwr-framework/en/News"
+                                xtype="pathfield"/>
+                        </items>
+                    </fieldConfig>
+                </multiauto>
+            </items>
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                render="function() { this.findParentByType('tabpanel').hideTabStripItem(2); }"/>
+        </automatedinput>
+    </items>
+</jcr:root>
