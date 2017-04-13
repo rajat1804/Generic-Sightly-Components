@@ -1,0 +1,84 @@
+.mainPage {
+	background: white;
+	width:940px;
+	float: none;
+}
+
+.main-content {
+
+	
+	 width:940px;
+	height:1000px;
+	margin: 0 auto;
+    background-attachment: fixed;
+    background-position: center; 
+
+
+}
+
+
+.text-contentcentre {
+	text-align: center;
+    color:#FFC0CB;
+    padding-top: 200px;
+}
+.buttoncentre {
+    background-color: #FF4500;
+    border: none;
+    color: white;
+    float: none;
+    display: inline;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.text-contentright {
+	text-align: right;
+    color:#FFC0CB;
+        padding-top: 200px;
+
+}
+.buttonright {
+    background-color:#FF4500;
+    border: none;
+    color: white;
+    float: right;
+    display: inline;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.text-contentleft {
+	text-align: left;
+    color:#FFC0CB;
+        padding-top: 200px;
+
+}
+.buttonleft {
+    background-color: #FF4500;
+    border: none;
+    color: white;
+    float: left;
+    display: inline;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    margin: 4px 2px;
+    cursor: pointer;
+}
