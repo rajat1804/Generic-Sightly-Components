@@ -1,0 +1,19 @@
+.....
+
+  <div data-sly-use.convertToJSON="${'convertToJSON.js' @ nodeName=properties.questionMap}">
+
+    <div data-sly-list.proposerUploadtypeObj="${convertToJSON.proposerObjs}" data-sly-unwrap>
+
+        <ul data-sly-list="${proposerUploadtypeObj.glossaryterm}">
+            <li id= '${item}'>${item}<br>
+
+
+                 <div data-sly-resource="${item @ resourceType='foundation/components/parsys'}"></div>
+
+
+            </li>
+        </ul>
+
+    </div>
+
+  </div> 

@@ -1,0 +1,8 @@
+#base=script
+
+lightslider.js
+testscript.js
+jquery.elevatezoom.js
+
+zoomscript.js
+

@@ -17,12 +17,25 @@
             xtype="pathfield"/>
         <customPaths
             jcr:primaryType="cq:Widget"
-            fieldLabel="Select nav paths"
+            fieldLabel="Select nav paths1"
             name="./customPaths"
             xtype="multifield">
             <fieldConfig
                 jcr:primaryType="nt:unstructured"
-                xtype="pathfield"/>
+                xtype="devprofile">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <navPath
+                        jcr:primaryType="cq:Widget"
+                        dName="navPath"
+                        fieldLabel="Navigation Path"
+                        xtype="pathfield"/>
+                    <imagePath
+                        jcr:primaryType="cq:Widget"
+                        dName="imagePath"
+                        fieldLabel="Image Icon Path"
+                        xtype="pathfield"/>
+                </items>
+            </fieldConfig>
         </customPaths>
         <absParentNumValue
             jcr:primaryType="nt:unstructured"
@@ -30,5 +43,23 @@
             name="./pageDepth@TypeHint"
             value="Decimal"
             xtype="hidden"/>
+        <NavType
+            jcr:primaryType="cq:Widget"
+            defaultValue="topNav"
+            fieldLabel="Nav Type"
+            name="./navType"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <topNav
+                    jcr:primaryType="nt:unstructured"
+                    text="Top Nav"
+                    value="topNav"/>
+                <sideNav
+                    jcr:primaryType="nt:unstructured"
+                    text="Side Nav"
+                    value="sideNav"/>
+            </options>
+        </NavType>
     </items>
 </jcr:root>
