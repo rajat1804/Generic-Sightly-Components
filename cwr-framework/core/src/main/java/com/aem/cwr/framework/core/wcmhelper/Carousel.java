@@ -15,7 +15,7 @@ public class Carousel extends WCMUsePojo{
 	Logger log = LoggerFactory.getLogger(this.getClass());
 	
 	 	private String parentPagePath;
-	 	List<Slide> listObject=new ArrayList<Slide>();
+	 	List<CarouselSlide> listObject=new ArrayList<CarouselSlide>();
 	    String limit;
 	    Integer value;
 	    int count=1;
@@ -35,7 +35,7 @@ public class Carousel extends WCMUsePojo{
 				value = Integer.parseInt(limit);
 				while(itr.hasNext()&& count<=value)
 				{
-					Slide slide = new Slide(itr.next());
+					CarouselSlide slide = new CarouselSlide(itr.next());
 					listObject.add(slide);
 					count++;
 				}
@@ -44,7 +44,7 @@ public class Carousel extends WCMUsePojo{
 		{
 				while(itr.hasNext())
 		        {
-		            Slide slide = new Slide(itr.next());
+		            CarouselSlide slide = new CarouselSlide(itr.next());
 		            listObject.add(slide);
 		            count++;
 				}
@@ -54,7 +54,7 @@ public class Carousel extends WCMUsePojo{
 		      
 	}
 	
-	public List<Slide> getListObject()
+	public List<CarouselSlide> getListObject()
 	{
 		
 	return listObject;

@@ -35,8 +35,6 @@
                                 min="{Long}0"
                                 name="./playSpeed"
                                 value="{Long}6000"/>
-                            
-                            
                         </items>
                     </column>
                 </items>
