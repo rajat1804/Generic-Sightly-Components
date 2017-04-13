@@ -1,0 +1,50 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.all @ categories='cq_libs'}" />
+<html>
+
+<head>
+    <script>
+        $(function() {
+            $('.demo1').easyTicker({
+                direction: 'up',
+                easing: 'swing'
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>News Feed</h2>
+        <div>
+            <div data-sly-test="${properties.select == 'manualinput'}">
+                <div class="demo1 demof" data-sly-use.convertToJSON="${'convertToJSON.js' @ nodeName=properties.contentMap}">
+                    <ul>
+                        <div data-sly-list.proposerUploadtypeObj="${convertToJSON.proposerObjs}" data-sly-unwrap>
+                            <li><img src="${proposerUploadtypeObj.imgfile}" alt="Expandable Input" /><a href="${proposerUploadtypeObj.news}.html">${proposerUploadtypeObj.headline}
+</a>
+                                <p>${proposerUploadtypeObj.description}</p>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-sly-test="${properties.select == 'automatedinput'}">
+
+                <div class="demo1 demof" data-sly-use.news="com.aem.cwr.framework.core.News">
+                    <ul>
+                        <div data-sly-list.item="${news.entries}" data-sly-unwrap>
+                            <li>
+                                <img src="${item.imagePath}" alt="Expandable Input" />
+                                <a href="${item.newsPath}.html">${item.title}</a>
+                                <p>${item.description}</p>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<html>

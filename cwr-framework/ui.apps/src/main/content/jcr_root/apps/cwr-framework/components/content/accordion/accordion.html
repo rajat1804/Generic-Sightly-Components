@@ -1,0 +1,37 @@
+<ul id="menu-menu">
+
+<li class="menu-item"> 
+
+     <a href="#" class="accordionCategory">${properties.title}</a>
+
+       <ul class="${properties.highlightCategory ? 'accordionActive':'accordionInactive' }">
+
+           <div class="grey-bg" data-sly-use.convertToJSON="${'convertToJSON.js' @ nodeName=properties.contentMap}">
+
+			  <div data-sly-list.proposerUploadtypeObj="${convertToJSON.proposerObjs}" data-sly-unwrap>
+
+                <li class="menu-item"> 
+
+                  <a href="#" class="accordionQuestion">${proposerUploadtypeObj.heading}</a>
+
+                     <ul class="${properties.highlightCategory ? 'accordionActive':'accordionInactive' }">
+
+                        <li class="menu-item"> 
+
+						   <a href="#">${proposerUploadtypeObj.description @context='html'}</a>
+
+                        </li>
+
+                    </ul>
+
+                  </li>
+
+               </div>
+
+            </div>
+
+        </ul>
+
+    </li>
+
+</ul>
