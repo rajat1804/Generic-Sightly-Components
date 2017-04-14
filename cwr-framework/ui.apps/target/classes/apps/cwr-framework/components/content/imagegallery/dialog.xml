@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    manageTabs="function(tab,noSwitch){var tabs=['props','image','advanced'];&#xa;var index=tabs.indexOf(tab);if(index==-1) &#xa;return;for(var i=1;i&lt;tabs.length;i++){if(index==i)&#xa;{this.unhideTabStripItem(i);}else{this.hideTabStripItem(i);}}this.doLayout();if(!noSwitch)this.activate(index);}"
+    title="Choose"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <selectmode
+            jcr:primaryType="cq:Widget"
+            title="Select"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <choose
+                    jcr:primaryType="cq:Widget"
+                    defaultValue=""
+                    fieldLabel="Select image upload mode"
+                    name="./mode"
+                    type="select"
+                    xtype="selection">
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        loadcontent="function(){this.findParentByType('tabpanel').manageTabs(this.getValue(),true);}"
+                        selectionchanged="function(box,value){box.findParentByType('tabpanel').manageTabs(value);}"/>
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            text="add images manually"
+                            value="image"/>
+                        <advanced
+                            jcr:primaryType="nt:unstructured"
+                            text="add folder path"
+                            value="advanced"/>
+                    </options>
+                </choose>
+            </items>
+        </selectmode>
+        <image
+            jcr:primaryType="cq:Widget"
+            title="Images"
+            xtype="panel">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                render="function() { this.findParentByType('tabpanel').hideTabStripItem(1); }"/>
+            <items jcr:primaryType="cq:WidgetCollection">
+                <images
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Click the '+' to add a new page"
+                    fieldLabel="Pages"
+                    name="./images"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        name="./imagePath"
+                        rootPath="/content/dam"
+                        width="155"
+                        xtype="pathfield"/>
+                </images>
+            </items>
+        </image>
+        <advanced
+            jcr:primaryType="cq:Widget"
+            title="Advanced"
+            xtype="panel">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                render="function() { this.findParentByType('tabpanel').hideTabStripItem(2); }"/>
+            <items jcr:primaryType="cq:WidgetCollection">
+                <imagefolder
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Click the '+' to add a new page"
+                    fieldLabel="Pages"
+                    name="./imagefolder"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        rootPath="/content/dam"
+                        width="155"
+                        xtype="pathfield"/>
+                </imagefolder>
+            </items>
+        </advanced>
+    </items>
+</jcr:root>
