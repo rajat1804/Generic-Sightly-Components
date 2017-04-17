@@ -32,6 +32,28 @@
                             value="advanced"/>
                     </options>
                 </choose>
+                <columnStructure
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="col-md-4"
+                    fieldLabel="Image Per Row"
+                    name="./imgPerRow"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <three
+                            jcr:primaryType="nt:unstructured"
+                            text="Three"
+                            value="col-md-4"/>
+                        <four
+                            jcr:primaryType="nt:unstructured"
+                            text="Four"
+                            value="col-md-3"/>
+                        <six
+                            jcr:primaryType="nt:unstructured"
+                            text="Six"
+                            value="col-md-2"/>
+                    </options>
+                </columnStructure>
             </items>
         </selectmode>
         <image

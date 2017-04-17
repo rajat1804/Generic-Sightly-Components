@@ -1,21 +1,21 @@
-<link rel="stylesheet"
+ <link rel="stylesheet"
   href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <div data-sly-test="${wcmmode.edit}" data-emptytext="ImageGallery"></div>
 Image Gallery<br/>
 
 <div data-sly-use.imagegallerycase="com.aem.cwr.framework.core.ImageGalleryComp">
 
-	<ul data-sly-list=${imagegallerycase.img_bean.imageList}>
-        <div class="col-md-3">
-            <img src=${item} width="260" height="145">
-        </div>
-	</ul>
+		<ul data-sly-list=${imagegallerycase.img_bean.imageList}>
+            <div class="${imagegallerycase.img_bean.imgPerRow}">
+                <img src=${item} width="260" height="145">
+            </div>
+        </ul>
 
-	<ul data-sly-list=${imagegallerycase.img_bean.folderList}>
-        <div class="col-md-3">
-        	<img src=${item} width="260" height="145" >
-        </div>   
-	</ul>
+        <ul data-sly-list=${imagegallerycase.img_bean.folderList}>
+            <div class="${imagegallerycase.img_bean.imgPerRow}">
+                <img src=${item} width="260" height="145" >
+            </div>   
+        </ul>
 </div>
 
 
