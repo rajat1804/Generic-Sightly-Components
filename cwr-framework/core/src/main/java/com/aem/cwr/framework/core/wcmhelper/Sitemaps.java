@@ -18,6 +18,7 @@ public class Sitemaps extends WCMUsePojo{
 	private String rootPagePath;
 	String checkbox;
 	String limit;
+	String currentPage;
 	int depth;
 
 
@@ -29,14 +30,36 @@ public class Sitemaps extends WCMUsePojo{
 		rootPagePath = get("path", String.class);
 		checkbox = get("showAll", String.class);
 		limit = get("limit", String.class);
+		currentPage = get("current", String.class);
 		log.error("The value of checkbox is 1111111"+checkbox);
 		log.error("The parent page is 2222222222"+rootPagePath);
 		log.error("The value of limit is 3333333333"+limit);
 
 		Resource resource=getResourceResolver().getResource(rootPagePath);
 		Page page=resource.adaptTo(Page.class);
-		Slide slide1 = new Slide(page);
-		listObject.add(slide1);
+		String name = page.getName();
+		log.error("The name of the page isssssssss"+name);
+		log.error("The name of the current page isssssssss"+currentPage);
+		
+		
+		if(currentPage.equalsIgnoreCase(name)){
+			
+			 
+			log.error("inside ifffffffffffffffffffffffffffffffffff");
+			
+			
+		      }
+		else{
+			
+			Slide slide1 = new Slide(page);
+			listObject.add(slide1);
+			
+		}
+		
+		
+		
+		
+		
 
 
 		if(("true").equalsIgnoreCase(checkbox)){
@@ -46,12 +69,28 @@ public class Sitemaps extends WCMUsePojo{
 
 			while(itr.hasNext())
 			{
+				
+				
 				Page childPage =    itr.next();
+				String name1 = childPage.getName();
+				if(currentPage.equalsIgnoreCase(name1)){
+					
+					 
+					log.error("inside ifffffffffffffffffffffffffffffffffff");
+					
+					
+				      }
+				
+				else{
+				
+			
 				Slide slide = new Slide(childPage);
+                  
 				listObject.add(slide);
-
+				}
 			}
-		}  
+			}
+		 
 
 
 		else if(limit != "null"){
@@ -64,6 +103,7 @@ public class Sitemaps extends WCMUsePojo{
 
 	}
 
+
 	
 	void iterateOnChildren(Page page, int level)
 	{
@@ -75,9 +115,19 @@ public class Sitemaps extends WCMUsePojo{
 	{
 
 	    Page childpage=itr.next();
-
+	    String name2=childpage.getName();
+	    if(currentPage.equalsIgnoreCase(name2)){
+			
+			 
+			log.error("inside ifffffffffffffffffffffffffffffffffff");
+			
+			
+		      }
+		
+	    else{
 	    Slide slide=new Slide(childpage);
 	    listObject.add(slide);
+	    }
 	if(level!=0)
 		iterateOnChildren(childpage,level-1);
 	}
