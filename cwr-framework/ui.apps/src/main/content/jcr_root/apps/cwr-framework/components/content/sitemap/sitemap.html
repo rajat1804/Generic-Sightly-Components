@@ -1,12 +1,17 @@
 Sitemap Component
 
-<div data-sly-use.map="${'com.aem.cwr.framework.core.wcmhelper.Sitemaps' @ path=properties.rootPath,showAll=properties.showall , limit=properties.limit}" data-sly-unwrap><br>
+
+<div data-sly-use.map="${'com.aem.cwr.framework.core.wcmhelper.Sitemaps' @ path=properties.rootPath,showAll=properties.showall , limit=properties.limit , current=currentPage.name}" data-sly-unwrap><br>
 
 
      <div data-sly-list.child="${map.listObject}" data-sly-unwrap>
        <ul class="nm-social-list">
 
-              <a class = "${child.depth}" href =${child.path}> ${child.title}  </a><br>
+
+              <li>
+
+				<a class = "a${child.depth}" href =${child.path}>  ${child.title}  </a>
+              </li>
 
         </ul> 
 
