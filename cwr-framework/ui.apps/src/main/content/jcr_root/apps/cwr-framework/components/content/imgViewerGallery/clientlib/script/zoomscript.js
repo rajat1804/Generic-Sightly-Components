@@ -1,6 +1,9 @@
+
+
+
 $(document).ready(function () {
 $(".zoomdemo").elevateZoom({
-  zoomType				: "inner",
+  zoomType	: "inner",
   cursor: "crosshair"
 });
 });
