@@ -1,0 +1,101 @@
+
+
+
+aaaaaaaaaa
+<div data-sly-test="${wcmmode.edit}" data-emptytext="RSS FEED" class="cq-placeholder"></div>
+
+
+
+<div data-sly-use.linkList="com.aem.cwr.framework.core.RelatedNewsModel" data-sly-unwrap>
+
+
+     <sly data-sly-list.mytabTitles="${linkList.childList}">
+
+
+
+<ul data-sly-list.keyName="${mytabTitles}">
+
+
+
+<div data-sly-test="${keyName=='title'}">
+
+
+<h1>Title</h1>
+<h4>${mytabTitles[keyName]  @ context='html'}</h4>
+
+
+</div>
+
+
+
+<div data-sly-test="${keyName=='link'}">
+
+
+<h1>Link</h1>
+
+
+<a href="${mytabTitles[keyName]}" target="_blank">For Extra Information</a>
+
+
+</div>
+
+
+
+
+
+
+<div data-sly-test="${keyName=='pubDate'}">
+
+<h1>PublishDate</h1>
+<h4>${mytabTitles[keyName] @ context='html' }</h4>
+
+
+</div>
+
+
+<div data-sly-test="${keyName=='category'}">
+
+
+<h1>Category</h1>
+<h4>${mytabTitles[keyName] @ context='html'}</h4>
+
+
+</div>
+
+
+
+<div data-sly-test="${keyName=='description'}" >
+
+
+<h1>Description</h1>
+<h4 >${mytabTitles[keyName] @ context='html'}</h4>
+
+
+</div>
+
+
+<div data-sly-test="${keyName=='media' ||keyName=='url'}" >
+
+
+<h1>Media</h1>
+<img src="${mytabTitles[keyName]}" alt="alternate text" width="250" height="250">
+
+
+</div>
+  
+<div data-sly-test="${keyName!='title' && keyName!='description' && keyName!='category' && keyName!='pubDate' && keyName!='link' && keyName!='title' && keyName!='url'}">
+<h1>${keyName}</h1>
+<h4 >${mytabTitles[keyName] @ context='html'}</h4>
+
+
+</div>
+
+
+
+    </ul>
+
+<hr>
+
+
+
+
