@@ -101,24 +101,6 @@
                                 fieldLabel="Choose the news you want to display"
                                 rootpath="/content/cwr-framework/en/News"
                                 xtype="pathfield"/>
-                            <autoheadline
-                                jcr:primaryType="cq:Widget"
-                                dName="autoheadline"
-                                fieldLabel="Property to be used for Headline"
-                                value="title"
-                                xtype="textfield"/>
-                            <autodescription
-                                jcr:primaryType="cq:Widget"
-                                dName="autodesc"
-                                fieldLabel="Property to be used for Description"
-                                value="description"
-                                xtype="textarea"/>
-                            <autoimage
-                                jcr:primaryType="cq:Widget"
-                                dName="autoimage"
-                                fieldLabel="Property to be used for image"
-                                value="image"
-                                xtype="textfield"/>
                         </items>
                     </fieldConfig>
                 </multiauto>
