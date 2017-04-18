@@ -1,3 +1,1 @@
-bootstrap.min.css
-bootstrap-theme.min.css
 site.css
