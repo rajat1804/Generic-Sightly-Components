@@ -106,7 +106,7 @@
                             <automatedinput
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/foundation/container"
-                                class="carousel-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                                class="hide carousel-option-listfrom-showhide-target foundation-layout-util-vmargin"
                                 showhidetargetvalue="automatedinput">
                                 <items jcr:primaryType="nt:unstructured">
                                     <category
