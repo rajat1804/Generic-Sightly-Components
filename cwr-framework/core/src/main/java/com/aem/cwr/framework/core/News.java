@@ -9,12 +9,7 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.Iterable;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -43,7 +38,7 @@ public class News extends WCMUsePojo{
 
 
 
-				Resource res = getResourceResolver().getResource(finalProp+"/jcr:content");
+				Resource res = getResourceResolver().getResource(finalProp+Constants.JCR);
 				logger.debug("resource" + res.getName());
 
 				if(res.adaptTo(ValueMap.class).containsKey(Constants.TITLE)) {
@@ -58,9 +53,10 @@ public class News extends WCMUsePojo{
 					logger.debug("desc " + dDescription);
 					newsProperties.setDescription(dDescription);
 				}
-
-				if(res.adaptTo(ValueMap.class).containsKey(Constants.IMAGEPATH)) {
-					String dImagePath = res.adaptTo(ValueMap.class).get(Constants.IMAGEPATH,"");
+				
+				Resource resImage = getResourceResolver().getResource(finalProp+Constants.IMAGE);
+				if(resImage.adaptTo(ValueMap.class).containsKey(Constants.IMAGEPATH)) {
+					String dImagePath = resImage.adaptTo(ValueMap.class).get(Constants.IMAGEPATH,"");
 					logger.debug("image " + dImagePath);
 					newsProperties.setImagePath(dImagePath);
 				}
