@@ -1,0 +1,47 @@
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+
+<meta data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap>
+	<clientlib data-sly-call="${clientLib.all @ categories='blogClientLibs.all'}" data-sly-unwrap/>
+</meta>
+
+ 
+        <div id='content'>
+
+            <div class='like-block'>
+                <!--<div class='like-counter counter c_twitter'></div>-->
+                <button class='like-button share s_twitter'>Twitter</button>
+            </div>
+            <div class='like-block'>
+                 <!--<div class='like-counter counter c_facebook'></div>-->
+                <button class='like-button share s_facebook'>Facebook</button>
+            </div>
+            <div class='like-block'>
+                <!-- <div class='like-counter counter c_linkedin'></div>-->
+                <button class='like-button share s_linkedin'>Linkedin</button>
+            </div>
+
+            <div class='like-block'>
+                 <!--<div class='like-counter counter c_pinterest'></div>-->
+                <button class='like-button share s_pinterest'>Pinterest</button>
+            </div>
+
+			 <div class='like-block'>
+            <!--<div class='like-block-only-button'>-->
+                 <button class='like-button share s_plus'>Google +</button>
+            </div>
+            </div>
+
+
+        </div>
+
+<input type="hidden" id='blogDescId' value=${properties.blogDesc}></input>
+<input type="hidden" id="blogTitleId" value=${properties.blogTitle}></input>
+<div data-sly-test="${properties.isPrintable}">
+
+
+    <input type="button" name="abc" value="Print this page" onClick="window.print()"/>
+
+</div>
+    <div data-sly-use.blogComp="${'com.aem.cwr.framework.core.BlogComponent' @authoredDate=properties.blogDate}" data-sly-unwrap>
+    ${blogComp.blogDate}
+    </div>
