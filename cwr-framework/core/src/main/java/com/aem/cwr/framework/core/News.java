@@ -20,8 +20,6 @@ public class News extends WCMUsePojo{
 	
 	@Override
 	public void activate() throws Exception {
-
-		
 		
 		try {
 			String[] content= getProperties().get("autocontentMap", String[].class);
@@ -35,9 +33,6 @@ public class News extends WCMUsePojo{
 				newsProperties.setNewsPath(finalProp);
 				logger.debug("array element" + newsProperties.newsPath);
 
-
-
-
 				Resource res = getResourceResolver().getResource(finalProp+Constants.JCR);
 				logger.debug("resource" + res.getName());
 
@@ -45,7 +40,6 @@ public class News extends WCMUsePojo{
 					String dTitle = res.adaptTo(ValueMap.class).get(Constants.TITLE,"");
 					logger.debug("title " + dTitle);
 					newsProperties.setTitle(dTitle);
-					
 				}
 
 				if(res.adaptTo(ValueMap.class).containsKey(Constants.DESCRIPTION)) {
