@@ -102,12 +102,14 @@
                                                                     sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                                                                     fieldDescription="Select news path"
                                                                     fieldLabel="Choose the news you want to display"
+																	rootPath="/content/cwr-framework"
                                                                     name="./news"/>
                                                                 <image
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                                                                     fieldDescription="Select image from dam"
                                                                     fieldLabel="Thumbnail you want to display"
+																	rootPath="/content/dam/cwr-framework"
                                                                     name="./imgfile"/>
                                                             </items>
                                                         </column>
@@ -162,6 +164,7 @@
                                                                     sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                                                                     fieldDescription="Select news path"
                                                                     fieldLabel="Choose the news you want to display"
+																	rootPath="/content/cwr-framework"
                                                                     name="./autonews"/>
                                                             </items>
                                                         </column>
