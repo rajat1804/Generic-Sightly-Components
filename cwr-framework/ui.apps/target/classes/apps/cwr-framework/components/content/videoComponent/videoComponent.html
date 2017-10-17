@@ -1,0 +1,25 @@
+<head>
+<div class="cq-placeholder section" data-emptytext="Video Component"></div>
+</head>
+
+<body>
+<div data-sly-test="${properties.listFrom == 'yLink'}">
+	<div data-sly-test="${properties.elink}">
+    	<iframe width="100%" height="350" src="${properties.elink}" frameborder="0" allowfullscreen></iframe>
+	</div>
+    <div data-sly-test="${!properties.elink}">
+    	<b> Please add the embed video link to you dialog <b>
+	</div>
+</div>
+<div data-sly-test="${properties.listFrom == 'lDam'}">
+	<div data-sly-test="${properties.local}">
+		<video width="100%" height="350" controls>
+  			<source src="${properties.local}" type="video/mp4">
+  				Your browser does not support the video tag.
+		</video>
+    </div>
+    <div data-sly-test="${!properties.local}">
+		<b> Please choose a video from the dialog <b>
+    </div>
+</div>
+</body>

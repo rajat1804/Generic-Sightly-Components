@@ -1,0 +1,24 @@
+
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.all @ categories='ViewerGallery'}" data-sly-unwrap/>
+
+
+
+<div class="demo">
+    <ul id="lightSlider">
+
+						<sly data-sly-use.convertToJSON="${'convertToJSON.js' @ nodeName=properties.imageMap}">
+
+							<sly data-sly-list.proposerUploadtypeObj="${convertToJSON.proposerObjs}" data-sly-unwrap>
+
+    						    <li data-thumb="${proposerUploadtypeObj.caroimage}">
+
+                                     <img   src="${proposerUploadtypeObj.caroimage}" data-zoom-image="${proposerUploadtypeObj.caroimage}" />
+
+      							</li>
+						   </sly>
+                        </sly>
+
+    </ul>
+</div>
+
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="c1c950f9-eb1a-4e38-89c2-c58ea1a96c83">
+    <jcr:content
+        cq:lastModified="{Date}2017-10-17T11:40:09.127+05:30"
+        cq:lastModifiedBy="admin"
+        cq:name="kitchen1.jpg"
+        cq:parentPath="/content/dam/cwr-framework"
+        dam:assetState="processed"
+        dam:copiedAt="{Date}2017-10-17T11:40:10.879+05:30"
+        dam:parentAssetID="32c41512-d002-4ed7-9234-4d6137a70f0d"
+        dam:relativePath="cwr-framework/kitchen1.jpg"
+        jcr:lastModified="{Date}2017-10-17T11:40:44.835+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2017-10-17T11:40:43.606+05:30"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}96"
+            dam:Physicalheightininches="{Decimal}4.166666507720947"
+            dam:Physicalwidthindpi="{Long}96"
+            dam:Physicalwidthininches="{Decimal}8.0"
+            dam:Progressive="no"
+            dam:sha1="956ba54d4e7cbe16c572df7d32066d94ecd761ba"
+            dam:size="{Long}76248"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2017-10-11T15:45:46.539+05:30"
+            jcr:lastModified="{Date}2017-10-17T11:40:10.689+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}400"
+            tiff:ImageWidth="{Long}768"
+            xmp:CreatorTool="20-20 Technologies Inc. Design system"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

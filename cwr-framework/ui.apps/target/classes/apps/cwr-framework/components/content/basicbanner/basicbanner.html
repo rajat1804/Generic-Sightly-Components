@@ -1,0 +1,52 @@
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='newhero.style'}"/>
+
+<div class="mainPage">
+		<div class="main-content" style="background: url(${properties.backgroundImage @ context='unsafe'})no-repeat ;
+              opacity: 1; display: block; z-index: 2;" >
+			<div data-sly-test=" ${properties.talign=='centre'}">
+                  <div class="text-contentcentre">
+                 <h1 class="ex1">${properties.heading}</h1>
+				 <h2>${properties.message}</h2>
+
+                     <div data-sly-use.convertToJSON="${'convertToJSON.js' @ nodeName=properties.questionMap}">
+
+                       <div data-sly-list.proposerUploadtypeObj="${convertToJSON.proposerObjs}" data-sly-unwrap>
+
+                          <div class="buttoncentre"><a  href="${proposerUploadtypeObj.callToActionPath}.html">${proposerUploadtypeObj.callToAction}</a></div>
+                       </div>
+                     </div>
+                     </div>
+                   </div>
+              <div data-sly-test=" ${properties.talign=='right'}">
+                  <div class="text-contentright">
+                 <h1 class="ex1">${properties.heading}</h1>
+				 <h2>${properties.message}</h2>
+
+                     <div data-sly-use.convertToJSON="${'convertToJSON.js' @ nodeName=properties.questionMap}">
+
+                       <div data-sly-list.proposerUploadtypeObj="${convertToJSON.proposerObjs}" data-sly-unwrap>
+
+                          <div class="buttonright"><a  href="${proposerUploadtypeObj.callToActionPath}.html">${proposerUploadtypeObj.callToAction}</a></div>
+                       </div>
+                     </div>
+                     </div>
+                  </div>
+
+            <div data-sly-test=" ${properties.talign=='left'}">
+                  <div class="text-contentleft">
+                 <h1 class="ex1">${properties.heading}</h1>
+				 <h2>${properties.message}</h2>
+
+                     <div data-sly-use.convertToJSON="${'convertToJSON.js' @ nodeName=properties.questionMap}">
+
+                       <div data-sly-list.proposerUploadtypeObj="${convertToJSON.proposerObjs}" data-sly-unwrap>
+
+                          <div class="buttonleft"><a  href="${proposerUploadtypeObj.callToActionPath}.html">${proposerUploadtypeObj.callToAction}</a></div>
+                       </div>
+                     </div>
+                     </div>
+                  </div>
+			</div>
+		</div>

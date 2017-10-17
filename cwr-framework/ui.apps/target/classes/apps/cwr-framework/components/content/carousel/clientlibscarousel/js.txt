@@ -1,0 +1,3 @@
+docUploadcustomwidget.js
+carousel.js
+bootstrap.min.js

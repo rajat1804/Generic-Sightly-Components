@@ -1,0 +1,14 @@
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+ width: 70%;
+ margin: auto;
+  }
+
+#myCarousel img {
+    max-height: 400px !important;
+    min-height: 400px !important;
+}
+
+.carousel_width{
+width:912px;
+}

@@ -1,0 +1,9 @@
+<head><div class="cq-placeholder section" data-emptytext="Quick Links"></div></head> 
+<body>
+    <h1>${properties.title1}</h1>
+<sly data-sly-use.listUse="${'quickLinks.js' @ multifieldName='links1'}">  
+  <ul data-sly-list="${listUse}">  
+    <li><a href="${item.properties.path1}">${item.properties.text1}</a></li>  
+  </ul>  
+</sly>  
+</body>

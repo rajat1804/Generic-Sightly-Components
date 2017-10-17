@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}500"
+    width="{Long}700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <sitemap
+                jcr:primaryType="cq:Panel"
+                title="Social Links">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <rootPath
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Root Path"
+                        name="./rootPath"
+                        xtype="pathfield"/>
+                    <showAll
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Show all pages:"
+                        name="./showall"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <limit
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the level:"
+                        name="./limit"
+                        xtype="numberfield"/>
+                </items>
+            </sitemap>
+        </items>
+    </items>
+</jcr:root>

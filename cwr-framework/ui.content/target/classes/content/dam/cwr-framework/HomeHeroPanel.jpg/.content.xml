@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="c339c567-a393-421c-a9fa-5a7e38817b04">
+    <jcr:content
+        cq:lastModified="{Date}2017-10-17T11:40:09.413+05:30"
+        cq:lastModifiedBy="admin"
+        cq:name="HomeHeroPanel.jpg"
+        cq:parentPath="/content/dam/cwr-framework"
+        dam:assetState="processed"
+        dam:copiedAt="{Date}2017-10-17T11:40:44.393+05:30"
+        dam:parentAssetID="77145e81-7664-4157-b596-245cd09dfd3d"
+        dam:relativePath="cwr-framework/HomeHeroPanel.jpg"
+        jcr:lastModified="{Date}2017-10-17T11:40:44.816+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:Comments="CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 100&#xa; &#xa;"
+            dam:extracted="{Date}2017-10-17T11:40:44.412+05:30"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}1"
+            dam:Physicalheightindpi="{Long}96"
+            dam:Physicalheightininches="{Decimal}4.166666507720947"
+            dam:Physicalwidthindpi="{Long}96"
+            dam:Physicalwidthininches="{Decimal}8.0"
+            dam:Progressive="no"
+            dam:sha1="dca4f530891efeec6434feabf4191a6420e8c621"
+            dam:size="{Long}90240"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2017-10-11T15:45:45.947+05:30"
+            jcr:lastModified="{Date}2017-10-17T11:40:44.079+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}400"
+            tiff:ImageWidth="{Long}768"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>
