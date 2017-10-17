@@ -1,4 +1,5 @@
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+Blog Component 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 
 <meta data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap>
 	<clientlib data-sly-call="${clientLib.all @ categories='blogClientLibs.all'}" data-sly-unwrap/>
@@ -33,9 +34,9 @@
 
 
         </div>
+<input type="text" id="blogTitleId" value=${properties.blogTitle}></input>
+<input type="" id='blogDescId' value=${properties.blogDesc}></input>
 
-<input type="hidden" id='blogDescId' value=${properties.blogDesc}></input>
-<input type="hidden" id="blogTitleId" value=${properties.blogTitle}></input>
 <div data-sly-test="${properties.isPrintable}">
 
 
@@ -45,3 +46,4 @@
     <div data-sly-use.blogComp="${'com.aem.cwr.framework.core.BlogComponent' @authoredDate=properties.blogDate}" data-sly-unwrap>
     ${blogComp.blogDate}
     </div>
+

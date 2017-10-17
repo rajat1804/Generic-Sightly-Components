@@ -2,20 +2,23 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2017-09-29T11:45:20.671+05:30"
+        cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"
         jcr:title="CWRFrameworkSite Design"
         sling:resourceType="wcm/core/components/designer">
         <page jcr:primaryType="nt:unstructured">
             <par
+                jcr:lastModified="{Date}2017-09-28T15:00:24.561+05:30"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/parsys"
-                components="[group:CWRFrameworkComponents]">
+                components="[/libs/wcm/foundation/components/text,group:CWRFrameworkComponents]">
                 <colctrl
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="cwr-framework/components/content/colctrl"
                     layouts="2;cq-colctrl-lt0&#x9;2 Columns (50%, 50%)"/>
-                <cq:authoring
-                    jcr:primaryType="nt:unstructured">
+                <cq:authoring jcr:primaryType="nt:unstructured">
                     <assetToComponentMapping jcr:primaryType="nt:unstructured">
                         <image
                             jcr:primaryType="nt:unstructured"
@@ -26,13 +29,46 @@
                             type="Images"/>
                     </assetToComponentMapping>
                 </cq:authoring>
+                <section jcr:primaryType="nt:unstructured"/>
+                <glossary jcr:primaryType="nt:unstructured">
+                    <par3 jcr:primaryType="nt:unstructured">
+                        <Centrifugal_x0020_mixer
+                            jcr:lastModified="{Date}2017-09-29T11:37:02.693+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            components="[/apps/cwr-framework/components/content/basicbanner,/apps/cwr-framework/components/content/blogComponent,/apps/cwr-framework/components/content/carousel,/apps/cwr-framework/components/content/colctrl,/apps/cwr-framework/components/content/sitemap,/apps/cwr-framework/components/content/glossaryterms,/apps/cwr-framework/components/content/glossary,/apps/cwr-framework/components/content/image,/apps/cwr-framework/components/content/imgViewerGallery,/apps/cwr-framework/components/content/news-scroller,/apps/cwr-framework/components/content/rssFeed,/apps/cwr-framework/components/structure/header,/apps/cwr-framework/components/content/text,/apps/cwr-framework/components/content/textimage,/apps/cwr-framework/components/content/title,/apps/cwr-framework/components/content/topnav,/apps/bench/components/content/videoComponent]">
+                            <section jcr:primaryType="nt:unstructured"/>
+                        </Centrifugal_x0020_mixer>
+                    </par3>
+                    <par1 jcr:primaryType="nt:unstructured">
+                        <Apple
+                            jcr:lastModified="{Date}2017-09-29T11:45:20.669+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            components="group:CWRFrameworkComponents">
+                            <section jcr:primaryType="nt:unstructured"/>
+                        </Apple>
+                    </par1>
+                </glossary>
             </par>
             <logo
+                jcr:lastModified="{Date}2017-09-29T11:16:52.997+05:30"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="cwr-framework/components/structure/logo"
-                absParent="2">
+                absParent="2"
+                imageRotate="0"
+                maxWidth="165">
                 <image/>
             </logo>
+            <title
+                jcr:lastModified="{Date}2017-09-28T19:06:22.445+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"/>
         </page>
     </jcr:content>
+    <clientlib-all/>
+    <clientlib-glossary/>
+    <clientlib-site/>
+    <favicon.ico/>
 </jcr:root>

@@ -1,6 +1,6 @@
 .mainPage {
 	background: white;
-	width:940px;
+	width:912px;
 	float: none;
 }
 
@@ -8,7 +8,7 @@
 
 	
 	 width:940px;
-	height:1000px;
+	height:500px;
 	margin: 0 auto;
     background-attachment: fixed;
     background-position: center; 
@@ -43,6 +43,7 @@
 	text-align: right;
     color:#FFC0CB;
         padding-top: 200px;
+    padding-right: 30px;
 
 }
 .buttonright {

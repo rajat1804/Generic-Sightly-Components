@@ -1,12 +1,12 @@
-Hiiiiiiiiiiiiiii
-<div data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">  </div>
+
+<div data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
 
 <div data-sly-use.convertToJSON1="${'convertToJSON.js' @ nodeName=properties.multifield}"></div>
 
 <clientlib data-sly-call="${clientLib.all @ categories='carouselall'}" data-sly-unwrap/>
 
 
-<div class="container">
+<div class="carousel_width">
   <br>
       <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="${properties.playSpeed}" data-pause="hover">
 
@@ -52,8 +52,8 @@ Hiiiiiiiiiiiiiii
 							<div class="item ${proposerUploadtypeObj1List.index == 0 ? 'active' : ''}" >
 							<img src="${proposerUploadtypeObj1.image != '' ? proposerUploadtypeObj1.image : '/etc/designs/default/0.gif'}" alt="${proposerUploadtypeObj1.fieldlabel1}">
 							<div class="carousel-caption">	
-							<h3>${proposerUploadtypeObj1.fieldTitle}</h3>
-							<p>${proposerUploadtypeObj1.fieldDesc}</p>
+							<h3>${proposerUploadtypeObj1.fieldLabel1}</h3>
+							<p>${proposerUploadtypeObj1.fieldLink1}</p>
 							</div>
 							</div>
 						</div>

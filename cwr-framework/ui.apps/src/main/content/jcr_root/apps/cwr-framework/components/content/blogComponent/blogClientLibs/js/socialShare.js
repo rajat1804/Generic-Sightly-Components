@@ -9,7 +9,7 @@
                     title: $('#blogTitleId').val(),
                     text: $('#blogDescId').val(),
                     image: 'https://static.pexels.com/photos/27714/pexels-photo-27714.jpg',
-                    url: 'http://www.yahoo.com'
+                    url: 'http://www.gsmarena.com'
                 });
                 $('.counter').ShareCounter({
                     url: 'http://google.com/'

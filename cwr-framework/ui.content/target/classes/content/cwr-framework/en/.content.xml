@@ -2,10 +2,12 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2017-10-06T17:29:25.967+05:30"
+        cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"
         jcr:title="English"
-        pageTitle="New Project"
-        sling:resourceType="cwr-framework/components/structure/page">
+        sling:resourceType="cwr-framework/components/structure/page"
+        pageTitle="New Project">
         <logo
             jcr:primaryType="nt:unstructured"
             sling:resourceType="cwr-framework/components/structure/logo"/>
@@ -18,14 +20,14 @@
         <par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/parsys">
-            
-            
             <title_1
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Lorem ipsum"
-                type="h2"
-                sling:resourceType="cwr-framework/components/content/title"/>
+                sling:resourceType="cwr-framework/components/content/title"
+                type="h2"/>
             <text
+                jcr:lastModified="{Date}2017-09-28T15:01:46.927+05:30"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="cwr-framework/components/content/text"
                 text="&lt;p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p>"
@@ -53,11 +55,110 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="cwr-framework/components/content/colctrl"
                 controlType="end"/>
-            <image_1
-                jcr:created="{Date}2015-01-01T00:00:00.000Z"
+            <accordion
+                jcr:created="{Date}2017-09-25T12:40:42.401+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-09-25T12:41:55.057+05:30"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="cwr-framework/components/content/image"
-                fileReference="/content/dam/cwr-framework/asset.jpg"/>
+                sling:resourceType="cwr-framework/components/content/accordion"
+                contentMap="[{&quot;heading&quot;:&quot;Sports&quot;\,&quot;description&quot;:&quot;All news related to sports will be available here&quot;},{&quot;heading&quot;:&quot;City&quot;\,&quot;description&quot;:&quot;News related to your city is available here&quot;}]"
+                title="News"/>
+            <basicbanner
+                jcr:created="{Date}2017-09-25T12:49:11.277+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-10-06T16:51:41.667+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cwr-framework/components/content/basicbanner"
+                backgroundImage="/content/dam/mySightlyImages/iStock_000028344540XLarge-e1424358894559.jpg"
+                heading="My Banner"
+                message="This is a banner message"
+                questionMap="[{&quot;callToAction&quot;:&quot;Button 1&quot;\,&quot;callToActionPath&quot;:&quot;&quot;},{&quot;callToAction&quot;:&quot;Button 2&quot;\,&quot;callToActionPath&quot;:&quot;&quot;}]"
+                talign="right"/>
+            <news_scroller
+                jcr:created="{Date}2017-09-26T10:53:17.811+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-09-26T10:56:44.145+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cwr-framework/components/content/news-scroller"
+                contentMap="[{&quot;headline&quot;:&quot;Saubhagya scheme: All you need to know&quot;\,&quot;description&quot;:&quot;Prime Minister Narendra Modi launched the Rs16\,320-crore Pradhan Mantri Sahaj Bijli Har Ghar Yojana\, or Saubhagya\, on Monday evening to provide electricity connections to over 4 crore families in rural and urban areas by December 2018. Here are some FAQs about the scheme expected to be a game changer for the government’s ‘electricity for all’ programme.&quot;\,&quot;news&quot;:&quot;&quot;\,&quot;imgfile&quot;:&quot;/content/dam/mySightlyImages/thermomix1.jpg&quot;},{&quot;headline&quot;:&quot;Narendra Modi gets a stellar economic advisory panel but will he listen to it in an election year?&quot;\,&quot;description&quot;:&quot;So\, Prime Minister Narendra Modi has got his three wise men and one wise woman to advise him on managing the economy. The Prime Minister’s Economic Advisory Council (PMEAC) has been revived with Bibek Debroy as chairman and Surjit Bhalla\, Rathin Roy and Ashima Goyal as members. Ratan Watal\, a career bureaucrat\, will be member secretary.&quot;\,&quot;news&quot;:&quot;&quot;\,&quot;imgfile&quot;:&quot;/content/dam/mySightlyImages/thermomix2.jpg&quot;}]"
+                select="manualinput"/>
+            <carousel
+                jcr:created="{Date}2017-09-28T14:43:20.990+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-10-06T12:10:12.690+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cwr-framework/components/content/carousel"
+                listFrom="images"
+                multifield="[{&quot;fieldLabel1&quot;:&quot;wdaawdawd&quot;\,&quot;fieldLink1&quot;:&quot;awfawfawf&quot;\,&quot;image&quot;:&quot;/content/dam/mySightlyImages/kitchen1.jpg&quot;},{&quot;fieldLabel1&quot;:&quot;afawagfa&quot;\,&quot;fieldLink1&quot;:&quot;gagawg&quot;\,&quot;image&quot;:&quot;/content/dam/mySightlyImages/HomeHeroPanel.jpg&quot;}]"
+                playSpeed="3000"/>
+            <videocomponent
+                jcr:created="{Date}2017-09-28T17:13:11.644+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-09-28T17:18:46.621+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="bench/components/content/videoComponent"
+                elink="https://www.youtube.com/embed/lw-Xu7ZLD3w"
+                listFrom="yLink"/>
+            <sitemap
+                jcr:created="{Date}2017-09-29T13:45:29.083+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-10-04T10:42:07.136+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cwr-framework/components/content/sitemap"
+                limit="0"
+                rootPath="/content/geometrixx-outdoors/en"/>
+            <imgviewergallery
+                jcr:created="{Date}2017-10-04T10:40:23.831+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-10-04T10:40:23.831+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cwr-framework/components/content/imgViewerGallery"/>
+            <blogcomponent
+                jcr:created="{Date}2017-10-04T11:15:11.062+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-10-04T11:17:49.218+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cwr-framework/components/content/blogComponent"
+                blogDate="11/01/17"
+                blogDesc="&lt;p>zdvzvzvzdvzvzvzv&lt;/p>&#xa;"
+                blogTitle="dghdfh"
+                teaserDesc="teaser des"
+                teaserTitle="teasetr">
+                <image
+                    jcr:lastModified="{Date}2017-10-04T11:17:49.218+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    imageRotate="0">
+                    <file/>
+                </image>
+            </blogcomponent>
+            <sightlytext
+                jcr:created="{Date}2017-10-05T11:34:41.079+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-10-05T11:35:55.336+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cwr-framework/components/content/sightlytext"
+                text="&lt;p>Inline Editing is a new technology introduced in CKEditor 4 that allows you to&amp;nbsp;&lt;b>select any editable element on the page and edit it in-place&lt;/b>. As a result, the editor can be used to edit content that looks just like the final page.&lt;/p>&#xd;&#xa;&lt;p>It is a total WYSIWYG experience, because not only the edited content looks like the final outcome, but also the page and the context where the content is placed is the real one. Unlike in&amp;nbsp;&lt;a href=&quot;https://docs.ckeditor.com/#!/guide/dev_framed&quot;>classic editor&lt;/a>, there is no&amp;nbsp;&amp;lt;iframe&amp;gt;&amp;nbsp;element created for the editing area. The CSS styles used for editor content are exactly the same as on the target page where this content is rendered!&lt;/p>&#xd;&#xa;&lt;p>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                textIsRich="true"/>
+            <linkscomponent
+                jcr:created="{Date}2017-10-06T17:26:26.913+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-10-06T17:29:25.963+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cwr-framework/components/content/linksComponent"
+                path1="[,]"
+                text1="[ddd,ddd]"
+                title1="QuickLink Component"/>
         </par>
         <image jcr:primaryType="nt:unstructured">
             <file/>

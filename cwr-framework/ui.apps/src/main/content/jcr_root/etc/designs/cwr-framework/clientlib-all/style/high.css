@@ -11,7 +11,7 @@ Accordion component
     padding-left: 30px;
     font-size: 2.1em;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
 
     text-shadow: 1px 1px 0px #000;
 }
@@ -23,8 +23,8 @@ display: block;
     background: none;
     padding: 10px 0px;
     padding-left: 30px;
-    font-size: 2.1em;
-    text-decoration: none;
+    font-size: 3.1em;
+    text-decoration: underline;
     font-weight: bold;
     color: #000000;
     text-shadow: 1px 1px 0px #000000;

@@ -2,9 +2,9 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment>CWRFramework - UI apps</comment>
-<entry key="createdBy">579458</entry>
+<entry key="createdBy">616863</entry>
 <entry key="name">cwr-framework.ui.apps</entry>
-<entry key="created">2017-03-29T12:00:55.795+0530</entry>
+<entry key="created">2017-10-17T11:22:32.808+0530</entry>
 <entry key="groupId">CWRFramework</entry>
 <entry key="version">1.0-SNAPSHOT</entry>
 <entry key="requiresRoot">false</entry>

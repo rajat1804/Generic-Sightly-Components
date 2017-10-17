@@ -102,15 +102,15 @@
                                                                     sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                                                                     fieldDescription="Select news path"
                                                                     fieldLabel="Choose the news you want to display"
-																	rootPath="/content/cwr-framework"
-                                                                    name="./news"/>
+                                                                    name="./news"
+                                                                    rootPath="/content"/>
                                                                 <image
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                                                                     fieldDescription="Select image from dam"
                                                                     fieldLabel="Thumbnail you want to display"
-																	rootPath="/content/dam/cwr-framework"
-                                                                    name="./imgfile"/>
+                                                                    name="./imgfile"
+                                                                    rootPath="/content/dam/cwr-framework"/>
                                                             </items>
                                                         </column>
                                                     </items>
@@ -164,8 +164,8 @@
                                                                     sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                                                                     fieldDescription="Select news path"
                                                                     fieldLabel="Choose the news you want to display"
-																	rootPath="/content/cwr-framework"
-                                                                    name="./autonews"/>
+                                                                    name="./autonews"
+                                                                    rootPath="/content/cwr-framework"/>
                                                             </items>
                                                         </column>
                                                     </items>

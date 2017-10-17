@@ -1,1 +1,17 @@
+com\aem\cwr\framework\core\Constants.class
+com\aem\cwr\framework\core\ImageGalleryComp.class
+com\aem\cwr\framework\core\wcmhelper\Logo.class
+com\aem\cwr\framework\core\RelatedNewsModel.class
+com\aem\cwr\framework\core\BlogComponent.class
+com\aem\cwr\framework\core\NewsProperties.class
+com\aem\cwr\framework\core\News.class
+com\aem\cwr\framework\core\wcmhelper\Sitemaps.class
+com\aem\cwr\framework\core\TopNav.class
+com\aem\cwr\framework\core\RSSFeedComponent.class
+com\aem\cwr\framework\core\wcmhelper\Carousel.class
+com\aem\cwr\framework\core\wcmhelper\CarouselSlide.class
+com\aem\cwr\framework\core\ImageGalleryBean.class
+com\aem\cwr\framework\core\SimpleDSComponent.class
+com\aem\cwr\framework\core\wcmhelper\FixedList.class
 com\aem\cwr\framework\core\package-info.class
+com\aem\cwr\framework\core\wcmhelper\Slide.class

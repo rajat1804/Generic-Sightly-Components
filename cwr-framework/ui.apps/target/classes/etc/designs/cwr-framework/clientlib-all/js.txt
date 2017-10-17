@@ -1,0 +1,3 @@
+#base=script
+docUploadcustomwidget.js
+high.js
